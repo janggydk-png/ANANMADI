@@ -1,0 +1,252 @@
+{
+  "base_date": "2026-10-15",
+  "sections": {
+    "procedure": {
+      "title": "행위료",
+      "items": [
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "관절초음파(편측)",
+          "type": "손가락,발가락",
+          "price": "30,000",
+          "min": "0",
+          "max": "30,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "관절초음파(편측)",
+          "type": "주관절,손목관절,발목관절,슬관절",
+          "price": "50,000",
+          "min": "0",
+          "max": "50,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "관절초음파(편측)",
+          "type": "고관절,견관절",
+          "price": "80,000",
+          "min": "0",
+          "max": "80,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "연부조직 정밀초음파",
+          "type": "",
+          "price": "50,000",
+          "min": "0",
+          "max": "50,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "연부조직 간단초음파",
+          "type": "",
+          "price": "20,000",
+          "min": "0",
+          "max": "20,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "인대강화주사(프롤로)",
+          "type": "",
+          "price": "50,000",
+          "min": "50,000",
+          "max": "200,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "리포라제주(유착방지제)",
+          "type": "",
+          "price": "1,000",
+          "min": "1,000",
+          "max": "1,000,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "DNA 주사",
+          "type": "",
+          "price": "100,000",
+          "min": "",
+          "max": "100,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "체외충격파",
+          "type": "타수에 따라 다름",
+          "price": "80,000",
+          "min": "80,000",
+          "max": "240,000",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "mid": "",
+          "sub": "",
+          "code": "",
+          "name": "신장분사치료(cryo)",
+          "type": "",
+          "price": "20,000",
+          "min": "",
+          "max": "",
+          "material": "",
+          "drug": "",
+          "note": "",
+          "updated": ""
+        }
+      ]
+    },
+    "material": {
+      "title": "치료재료대",
+      "items": []
+    },
+    "drug": {
+      "title": "약제비",
+      "items": [
+        {
+          "code": "",
+          "name": "대상포진 / 싱그릭스주",
+          "type": "",
+          "price": "220,000",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "독감(인플루엔자)플루아릭스",
+          "type": "",
+          "price": "35,000",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "폐렴구균백신",
+          "type": "",
+          "price": "170,000",
+          "note": "",
+          "updated": ""
+        }
+      ]
+    },
+    "certificate": {
+      "title": "제증명",
+      "items": [
+        {
+          "code": "",
+          "name": "진료확인서",
+          "type": "",
+          "price": "3,000",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "진단서",
+          "type": "",
+          "price": "20,000",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "소견서",
+          "type": "",
+          "price": "20,000",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "상해진단서",
+          "type": "",
+          "price": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "서류재발급(1매당)",
+          "type": "",
+          "price": "",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "진료기록사본",
+          "type": "1~5매",
+          "price": "1,000",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "진료기록사본",
+          "type": "6매~",
+          "price": "100",
+          "note": "",
+          "updated": ""
+        },
+        {
+          "code": "",
+          "name": "진료기록영상CD",
+          "type": "",
+          "price": "10,000",
+          "note": "",
+          "updated": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+/* =================================================================
+   ani.css - 스크롤 진입
+   섹션 제목·소개·의료진·비수술 패널·진료안내가 아래에서 올라옵니다.
+   ================================================================= */
+
+#con1-1 .con1-intro,
+#con1-2 .con-head,
+#con1-2 .con1-profile__info,
+#con2 .con-head,
+#con3 .con-head,
+#con3 .con3-panel.is-active,
+#con4 .con-head,
+#con4 .schedule-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.9s cubic-bezier(0.33, 0, 0.2, 1),
+    transform 0.9s cubic-bezier(0.33, 0, 0.2, 1);
+}
+
+#con1-2 .con1-profile__info,
+#con3 .con3-panel.is-active,
+#con4 .schedule-wrap {
+  transition-delay: 0.2s;
+}
+
+html.is-programmatic-scroll {
+  overflow-anchor: none;
+}
+
+html.is-programmatic-scroll .con2-marquee__track {
+  animation-play-state: paused;
+}
+
+html.is-programmatic-scroll #con1-1 .con1-intro,
+html.is-programmatic-scroll #con1-2 .con-head,
+html.is-programmatic-scroll #con1-2 .con1-profile__info,
+html.is-programmatic-scroll #con2 .con-head,
+html.is-programmatic-scroll #con3 .con-head,
+html.is-programmatic-scroll #con3 .con3-panel.is-active,
+html.is-programmatic-scroll #con4 .con-head,
+html.is-programmatic-scroll #con4 .schedule-wrap {
+  transition: none !important;
+}
+
+#con1-1 .con1-intro.is-in-view,
+#con1-2 .con-head.is-in-view,
+#con1-2 .con1-profile__info.is-in-view,
+#con2 .con-head.is-in-view,
+#con3 .con-head.is-in-view,
+#con3 .con3-panel.is-in-view,
+#con4 .con-head.is-in-view,
+#con4 .schedule-wrap.is-in-view {
+  opacity: 1;
+  transform: none;
+}
+
+#con1-1 .con1-intro__copy h2 span::after {
+  transform: scaleX(0);
+  transition: transform 0.9s cubic-bezier(0.33, 0, 0.2, 1) 0.15s;
+}
+
+#con1-1 .con1-intro.is-in-view .con1-intro__copy h2 span::after {
+  transform: scaleX(1);
+}
+
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#con3 .con3-panel.is-tab-in {
+  animation: tab-in 0.5s cubic-bezier(0.33, 0, 0.2, 1) both;
+  transition: none;
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #con1-1 .con1-intro,
+  #con1-2 .con-head,
+  #con1-2 .con1-profile__info,
+  #con2 .con-head,
+  #con3 .con-head,
+  #con3 .con3-panel.is-active,
+  #con4 .con-head,
+  #con4 .schedule-wrap {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  #con1-1 .con1-intro__copy h2 span::after {
+    transform: scaleX(1) !important;
+    transition: none !important;
+  }
+
+  #con3 .con3-panel.is-tab-in {
+    animation: none;
+  }
+
+  .con3-feature__media::after {
+    animation: none;
+  }
+}

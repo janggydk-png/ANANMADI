@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /x_system/
+
+Sitemap: https://asanmadi.com/sitemap.xml

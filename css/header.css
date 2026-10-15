@@ -1,0 +1,485 @@
+.container1520 {
+  max-width: 1520px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+.header_inner {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: var(--header-inset);
+  left: var(--header-inset);
+  right: var(--header-inset);
+  width: auto;
+  height: var(--header-height);
+  z-index: 1000;
+  background: var(--white);
+  color: var(--color-text-strong);
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(3, 7, 18, 0.18);
+  transition:
+    top 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    right 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-radius 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+header.is-scrolled {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  border-radius: 0;
+  box-shadow: 0 4px 16px rgba(3, 7, 18, 0.12);
+}
+
+:root {
+  --header-inset: 15px;
+  --header-height: 70px;
+  --header-offset: calc(var(--header-inset) + var(--header-height));
+}
+
+.h_top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid var(--color-text-muted);
+}
+
+.h_logo {
+  height: min(3.2rem, 2.8vw);
+  filter: none;
+}
+
+.h_logo img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.header_inner.header_in_wrap,
+.header_in_wrap {
+  position: relative;
+  max-width: 2020px;
+  height: 70px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 min(40px, 4vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: height 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+header.is-scrolled .header_in_wrap {
+  height: 80px;
+}
+
+.header_in_wrap nav {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.header_in_wrap .gnb {
+  display: flex;
+  height: 100%;
+  gap: min(16px, 1.6vw);
+  font-family: "NanumSquare", sans-serif;
+  font-size: min(18px, 1.4vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.04rem;
+}
+
+.header_in_wrap .gnb li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header_in_wrap .gnb li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0;
+  color: var(--gray);
+  font-size: min(18px, 1.4vw);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04rem;
+  transition: color 0.38s padding-left 0.38s ease;
+  white-space: nowrap;
+}
+
+.header_in_wrap .gnb li a:hover,
+.header_in_wrap .gnb li a:focus-visible,
+.header_in_wrap .gnb li.active a,
+.header_in_wrap .gnb li a.active {
+  color: var(--blue);
+}
+
+/* 글자 오버시 심볼 효과 */
+.header_in_wrap .gnb li a::before {
+  content: "";
+  display: inline-block;
+  width: 26px; 
+  height: 18px;
+  margin-right: 5px;
+  background: url('../img/logo-symbol.svg') no-repeat center / contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header_in_wrap .gnb li a:hover::before,
+.header_in_wrap .gnb li a:focus-visible::before,
+.header_in_wrap .gnb li.active a::before,
+.header_in_wrap .gnb li a.active::before {
+  opacity: 1; 
+}
+
+.header_in_wrap .header_link {
+  display: none;
+  align-items: center;
+  font-family: "NanumSquare";
+  font-weight: bold;
+  color: var(--color-text-strong);
+}
+
+/* 햄버거 메뉴 */
+.hamburger {
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  width: 100%;
+  height: 10%;
+  translate: 0 -50%;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 100%;
+  background-color: var(--k700);
+  border-radius: 1px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: var(--k700);
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+  height: 100%;
+}
+
+.hamburger-inner::before {
+  top: -400%;
+}
+
+.hamburger-inner::after {
+  bottom: -400%;
+}
+
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.14s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+  transition:
+    top 0.14s 0.21s ease,
+    opacity 0.14s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+  transition:
+    bottom 0.14s 0.21s ease,
+    transform 0.14s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.21s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition:
+    top 0.14s ease,
+    opacity 0.14s 0.21s ease;
+}
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition:
+    bottom 0.14s ease,
+    transform 0.14s 0.21s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* =========================================================
+ * 모바일 헤더 (≤ 1200px)
+ * - 드롭다운 메뉴
+ * ========================================================= */
+@media (min-width: 0px) and (max-width: 1200px) {
+  :root {
+    --header-offset: var(--header-height);
+  }
+
+  header,
+  header.is-scrolled {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: var(--white);
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  header::after {
+    display: none;
+  }
+
+  .h_logo,
+  .header_in_wrap .header_link,
+  .hamburger {
+    position: relative;
+    z-index: 3;
+  }
+
+  .hamburger-box {
+    width: min(30px, 8vw);
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .header_in_wrap .header_link {
+    display: flex;
+  }
+
+  header .header_in_wrap,
+  header.is-scrolled .header_in_wrap {
+    height: var(--header-height);
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header_in_wrap .h_logo {
+    flex-shrink: 0;
+    height: min(3.2rem, 10vw);
+  }
+
+  .header_in_wrap .h_logo a {
+    display: block;
+    height: 100%;
+  }
+
+  .header_in_wrap .h_logo img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+  }
+
+  /* ============ 모바일 드롭다운 메뉴 ============ */
+  .header_in_wrap nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    position: absolute;
+    top: var(--header-height);
+    left: calc(min(40px, 4vw) * -1);
+    right: calc(min(40px, 4vw) * -1);
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    transform: none;
+    z-index: 1;
+    background: var(--white);
+    border-radius: 0;
+    border-top: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: grid-template-rows 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+    box-shadow: none;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(3, 7, 18, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  body.is-menu-open::before {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  header:has(nav.menu_open),
+  header.is-scrolled:has(nav.menu_open) {
+    border-radius: 0;
+  }
+
+  header:has(nav.menu_open) .header_in_wrap::after {
+    content: "";
+    position: absolute;
+    left: calc(min(40px, 4vw) * -1);
+    right: calc(min(40px, 4vw) * -1);
+    top: 100%;
+    z-index: 4;
+    height: 36px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(3, 7, 18, 0.05), rgba(3, 7, 18, 0));
+  }
+
+  header.is-scrolled .header_in_wrap nav {
+    top: var(--header-height);
+  }
+
+  .header_in_wrap nav.menu_open {
+    grid-template-rows: 1fr;
+    pointer-events: auto;
+  }
+
+  .header_in_wrap nav .gnb {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    font-size: min(18px, 4.2vw);
+    gap: 0;
+  }
+
+  .header_in_wrap nav .gnb li {
+    width: 100%;
+    height: auto;
+  }
+
+  .header_in_wrap nav .gnb a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: min(18px, 4vw) min(24px, 5vw);
+    font-size: min(18px, 4.2vw);
+    line-height: 1.4;
+    color: var(--k700);
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+    transition:
+      background 0.28s ease,
+      color 0.28s ease;
+  }
+
+  .header_in_wrap nav .gnb li:last-child a {
+    border-bottom: none;
+  }
+
+  .header_in_wrap nav .gnb li a:hover {
+    color: var(--k700);
+    background: transparent;
+  }
+
+  /* 모바일 active: 블루 배경 + 화이트 텍스트 */
+  .header_in_wrap nav .gnb li.active a,
+  .header_in_wrap nav .gnb li a.active,
+  .header_in_wrap nav .gnb li.active a:hover,
+  .header_in_wrap nav .gnb li a.active:hover {
+    color: var(--white);
+    background: var(--m-main);
+  }
+
+  .header_in_wrap nav .gnb li.active a::before,
+  .header_in_wrap nav .gnb li a.active::before {
+    display: none;
+  }
+
+  /* 모바일에서는 데스크탑 밑줄 효과 비활성화 */
+  .header_in_wrap nav .gnb a::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header,
+  .header_in_wrap,
+  .header_in_wrap nav,
+  body::before {
+    transition: none;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .header_in_wrap nav {
+    left: 55%;
+  }
+}

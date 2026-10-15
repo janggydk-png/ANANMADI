@@ -1,0 +1,11 @@
+{
+    "mode": "preset",
+    "preset": "list",
+    "slide_per_view": 2,
+    "autoplay": true,
+    "autoplay_ms": 3000,
+    "slide_names": true,
+    "close_all": false,
+    "close_all_pos": "top",
+    "groups": []
+}

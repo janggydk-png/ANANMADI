@@ -1,0 +1,6 @@
+# 업로드 폴더에서는 스크립트를 실행하지 않는다 (이미지만 제공)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteOptions Inherit
+    RewriteRule \.(php\d*|phtml|phar|pht|phps|cgi|pl|py|sh|asp|aspx|jsp)$ - [F,NC]
+</IfModule>
